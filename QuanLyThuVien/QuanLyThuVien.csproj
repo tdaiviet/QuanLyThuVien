@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A399A3D-C4C0-46F3-B287-2EC79C930648}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyThuVien</RootNamespace>
+    <AssemblyName>QuanLyThuVien</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppUtil.cs" />
+    <Compile Include="FormChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePass.Designer.cs">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformation.Designer.cs">
+      <DependentUpon>FormInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Author\FormEditAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Author\FormEditAuthor.Designer.cs">
+      <DependentUpon>FormEditAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Author\FormAddAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Author\FormAddAuthor.Designer.cs">
+      <DependentUpon>FormAddAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Author\FormAuthors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Author\FormAuthors.Designer.cs">
+      <DependentUpon>FormAuthors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\BookType2\FormAddBookType2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\BookType2\FormAddBookType2.Designer.cs">
+      <DependentUpon>FormAddBookType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\BookType2\FormBookTypes2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\BookType2\FormBookTypes2.Designer.cs">
+      <DependentUpon>FormBookTypes2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\BookType2\FormEditBookType2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\BookType2\FormEditBookType2.Designer.cs">
+      <DependentUpon>FormEditBookType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\BookType\FormEditBookType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\BookType\FormEditBookType.Designer.cs">
+      <DependentUpon>FormEditBookType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\BookType\FormAddBookType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\BookType\FormAddBookType.Designer.cs">
+      <DependentUpon>FormAddBookType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\BookType\FormBookTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\BookType\FormBookTypes.Designer.cs">
+      <DependentUpon>FormBookTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Language\FormEditLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Language\FormEditLanguage.Designer.cs">
+      <DependentUpon>FormEditLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Language\FormAddLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Language\FormAddLanguage.Designer.cs">
+      <DependentUpon>FormAddLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Language\FormLanguages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Language\FormLanguages.Designer.cs">
+      <DependentUpon>FormLanguages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Library\BookLoan\FormPayBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Library\BookLoan\FormPayBooks.Designer.cs">
+      <DependentUpon>FormPayBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Library\BookLoan\FormLoanBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Library\BookLoan\FormLoanBooks.Designer.cs">
+      <DependentUpon>FormLoanBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Library\BookTitle\FormEditBookTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Library\BookTitle\FormEditBookTitle.Designer.cs">
+      <DependentUpon>FormEditBookTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Library\BookTitle\FormAddBookTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Library\BookTitle\FormAddBookTitle.Designer.cs">
+      <DependentUpon>FormAddBookTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Library\BookTitle\FormBookTitles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Library\BookTitle\FormBookTitles.Designer.cs">
+      <DependentUpon>FormBookTitles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Library\Book\FormBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Library\Book\FormBooks.Designer.cs">
+      <DependentUpon>FormBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Library\Book\FormRemoveBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Library\Book\FormRemoveBook.Designer.cs">
+      <DependentUpon>FormRemoveBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Library\Book\FormAddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Library\Book\FormAddBook.Designer.cs">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\MemberCard\FormEditMemberCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\MemberCard\FormEditMemberCard.Designer.cs">
+      <DependentUpon>FormEditMemberCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\MemberCard\FormAddMemberCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\MemberCard\FormAddMemberCard.Designer.cs">
+      <DependentUpon>FormAddMemberCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\MemberCard\FormExtendDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\MemberCard\FormExtendDate.Designer.cs">
+      <DependentUpon>FormExtendDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\MemberCard\FormMemberCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\MemberCard\FormMemberCards.Designer.cs">
+      <DependentUpon>FormMemberCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\PublishingHouse\FormEditPublishingHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\PublishingHouse\FormEditPublishingHouse.Designer.cs">
+      <DependentUpon>FormEditPublishingHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\PublishingHouse\FormAddPublishingHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\PublishingHouse\FormAddPublishingHouse.Designer.cs">
+      <DependentUpon>FormAddPublishingHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\PublishingHouse\FormPublishingHouses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\PublishingHouse\FormPublishingHouses.Designer.cs">
+      <DependentUpon>FormPublishingHouses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\User\FormEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\User\FormEditUser.Designer.cs">
+      <DependentUpon>FormEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\User\FormAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\User\FormAddUser.Designer.cs">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\User\FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\User\FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormChangePass.resx">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformation.resx">
+      <DependentUpon>FormInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Author\FormEditAuthor.resx">
+      <DependentUpon>FormEditAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Author\FormAddAuthor.resx">
+      <DependentUpon>FormAddAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Author\FormAuthors.resx">
+      <DependentUpon>FormAuthors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\BookType2\FormAddBookType2.resx">
+      <DependentUpon>FormAddBookType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\BookType2\FormBookTypes2.resx">
+      <DependentUpon>FormBookTypes2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\BookType2\FormEditBookType2.resx">
+      <DependentUpon>FormEditBookType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\BookType\FormEditBookType.resx">
+      <DependentUpon>FormEditBookType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\BookType\FormAddBookType.resx">
+      <DependentUpon>FormAddBookType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\BookType\FormBookTypes.resx">
+      <DependentUpon>FormBookTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Language\FormEditLanguage.resx">
+      <DependentUpon>FormEditLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Language\FormAddLanguage.resx">
+      <DependentUpon>FormAddLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Language\FormLanguages.resx">
+      <DependentUpon>FormLanguages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Library\BookLoan\FormPayBooks.resx">
+      <DependentUpon>FormPayBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Library\BookLoan\FormLoanBooks.resx">
+      <DependentUpon>FormLoanBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Library\BookTitle\FormEditBookTitle.resx">
+      <DependentUpon>FormEditBookTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Library\BookTitle\FormAddBookTitle.resx">
+      <DependentUpon>FormAddBookTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Library\BookTitle\FormBookTitles.resx">
+      <DependentUpon>FormBookTitles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Library\Book\FormBooks.resx">
+      <DependentUpon>FormBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Library\Book\FormRemoveBook.resx">
+      <DependentUpon>FormRemoveBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Library\Book\FormAddBook.resx">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\MemberCard\FormEditMemberCard.resx">
+      <DependentUpon>FormEditMemberCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\MemberCard\FormAddMemberCard.resx">
+      <DependentUpon>FormAddMemberCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\MemberCard\FormExtendDate.resx">
+      <DependentUpon>FormExtendDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\MemberCard\FormMemberCards.resx">
+      <DependentUpon>FormMemberCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\PublishingHouse\FormEditPublishingHouse.resx">
+      <DependentUpon>FormEditPublishingHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\PublishingHouse\FormAddPublishingHouse.resx">
+      <DependentUpon>FormAddPublishingHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\PublishingHouse\FormPublishingHouses.resx">
+      <DependentUpon>FormPublishingHouses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\User\FormEditUser.resx">
+      <DependentUpon>FormEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\User\FormAddUser.resx">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\User\FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Library128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customizegrid_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customizegrid_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangePass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\properties_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\properties_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxls_32x325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_32x325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttocsv_32x325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x162.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
